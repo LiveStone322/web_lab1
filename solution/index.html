@@ -1,42 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Мини-почта</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мини-почта</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- <link rel="stylesheet" href="styles/grid.css"> s-->
+  </head>
 
-  <!-- Место решения -->
+  <body>
 
+    <!-- Место решения -->
 
-  <!-- For debug -->
-  <div class="grid">
-    <div class="grid__column">
-      <div class="grid__sub-column" style="left: -1rem"></div>
-      <div class="grid__sub-column" style="left: 0"></div>
+    <section class="header">
+      <div class="header__logo">
+        Мини-почта
+      </div>
+      <div class="header__top-menu">
+        <nav class="top-menu__navigation">
+          <button class="btn btn_top"Письма</button>
+          <button class="btn btn_top"Написать</button>
+        </nav>
+        <div class="top-menu__profile">
+          <a href="#">@username</a>
+          <a href="#">Выход</a>
+        </div>
+      </div>
+
+    </section>
+    <section class="left-menu">
+
+    </section>
+    <section class="main">
+      <nav class="main__top-menu">
+        <button class="btn btn_left"Непрочитанные</button>
+        <button class="btn btn_left"Входящие</button>
+        <button class="btn btn_left"Отправленные</button>
+      </nav>
+      <div class="main__messages">
+        <div class="messages__message">
+          <div class="messages__first-row">
+            <img src="./images/avatar-1.png" alt="Кот1" class="message__avatar">
+            <p>
+              Имя
+            </p>
+            <time>28.08.2020</time>
+          </div>
+          <p class="messages__message-theme">
+            Тема
+          </p>
+          <p class="message_message-text">
+            Сообщение
+          </p>
+        </div>
+        <div class="messages__message">
+          <div class="messages__first-row">
+            <img src="./images/avatar-2.png" alt="Кот2" class="message__avatar">
+            <p>
+              Имя
+            </p>
+            <time>28.08.2020</time>
+          </div>
+          <p class="messages__message-theme">
+            Тема
+          </p>
+          <p class="message_message-text">
+            Сообщение
+          </p>
+        </div>
+        <div class="messages__message">
+          <div class="messages__first-row">
+            <img src="./images/avatar-3.png" alt="Кот3" class="message__avatar">
+            <p>
+              Имя
+            </p>
+            <time>28.08.2020</time>
+          </div>
+          <p class="messages__message-theme">
+            Тема
+          </p>
+          <p class="message_message-text">
+            Сообщение
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+
+    </footer>
+
+    <!-- For debug -->
+    <div class="grid">
+      <div class="grid__column">
+        <div class="grid__sub-column" style="left: -1rem"></div>
+        <div class="grid__sub-column" style="left: 0"></div>
+      </div>
+      <div class="grid__column"></div>
+      <div class="grid__column">
+        <div class="grid__sub-column" style="left: 0"></div>
+      </div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column">
+        <div class="grid__sub-column" style="right: 0"></div>
+        <div class="grid__sub-column" style="right: -1rem"></div>
+      </div>
     </div>
-    <div class="grid__column"></div>
-    <div class="grid__column">
-      <div class="grid__sub-column" style="left: 0"></div>
     </div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column">
-      <div class="grid__sub-column" style="right: 0"></div>
-      <div class="grid__sub-column" style="right: -1rem"></div>
-    </div>
-  </div>
-</div>
 
-</body>
+  </body>
+
 </html>

@@ -1,4 +1,43 @@
 @import "_fonts.css";
 
+:root {
+    --main-color: blue;
+}
+
+* {
+    box-sizing: border;
+}
+
+.btn {
+    
+}
+
+.header__top-menu {
+    display: flex;
+    flex-flow: row wrap;
+	justify-content: space-between;
+}
+.left-menu {
+    width:30%;
+}
+
+.main {
+    width: 70%;
+}
+.main__messages {
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+}
+.messages__message {
+    padding: 5px 20px;
+}
+.messages__message + .messages__message {
+    border-top: 2px solid var(--main-color);
+}
+
+.message__logo {
+    border-radius: 50% 50%;
+}
+
 /* For debug */
-/*@import "grid.css";*/
+@import "grid.css";
