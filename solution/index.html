@@ -1,42 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Мини-почта</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мини-почта</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- <link rel="stylesheet" href="styles/grid.css">  -->
+  </head>
 
-  <!-- Место решения -->
+  <body>
 
+    <!-- Место решения -->
 
-  <!-- For debug -->
-  <div class="grid">
-    <div class="grid__column">
-      <div class="grid__sub-column" style="left: -1rem"></div>
-      <div class="grid__sub-column" style="left: 0"></div>
+    <section class="header">
+      <div class="container">
+        <div class="header__logo col-small">
+          Мини-почта
+        </div>
+        <div class="header__top-menu col-large">
+          <nav class="header__navigation">
+            <button class="btn btn_top btn_top_active">Письма</button>
+            <button class="btn btn_top">Написать</button>
+          </nav>
+          <div class="header__profile">
+            <a href="#">@username</a><a href="#">Выход</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="container">
+        <nav class="main__left-menu col-small">
+          <p>Письма</p>
+          <button class="btn btn_left">Непрочитанные</button>
+          <button class="btn btn_left btn_left_active">Входящие</button>
+          <button class="btn btn_left">Отправленные</button>
+        </nav>
+        <div class="main__messages col-large">
+          <p>Входящие</p>
+          <article class="messages__message">
+            <div class="message__first-row">
+              <div class="message__profile-info">
+                <img src="./images/avatar-1.png" alt="Кот1" class="message__avatar">
+                <p>
+                  Barsik2007
+                </p>
+              </div>
+              <time>28.08.2020</time>
+            </div>
+            <p class="messages__message-theme">
+              Собрание всех котиков
+            </p>
+            <p class="message_message-text">
+              Всем привет! Пересылаю распоряжение об организации всеобщего собрания.
+            </p>
+          </article>
+          <article class="messages__message">
+            <div class="message__first-row">
+              <div class="message__profile-info">
+                <img src="./images/avatar-2.png" alt="Кот2" class="message__avatar">
+                <p>
+                  Judith
+                </p>
+              </div>
+              <time>28.08.2020</time>
+            </div>
+            <p class="messages__message-theme">
+              Красная точка
+            </p>
+            <p class="message_message-text">
+              Всем мяу! Сегодня утром была найдена красная точка на кухне. Я гналась за ней больше часа, но она сбежала. 
+              Продолжаю наблюдение. В этот раз она не уйдёт. Думаю, надо ещё раз проверить под холодильником. Всё, я убежала, тут опять бегает солнечное пятно!
+            </p>
+          </article>
+          <article class="messages__message">
+            <div class="message__first-row">
+              <div class="message__profile-info">
+                <img src="./images/avatar-3.png" alt="Кот3" class="message__avatar">
+                <p>
+                  angry_boss
+                </p>
+              </div>
+              <time>26.08.2020</time>
+            </div>
+            <p class="messages__message-theme">
+              Еда?
+            </p>
+            <p class="message_message-text">
+              Нам надо что-то делать с нехваткой еды! Я голодаю... Я так больше не могу...
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      (C) Курс Web-программирования | ПГНИУ
+    </footer>
+
+    <!-- For debug -->
+    <div class="grid">
+      <div class="grid__column">
+        <div class="grid__sub-column" style="left: -1rem"></div>
+        <div class="grid__sub-column" style="left: 0"></div>
+      </div>
+      <div class="grid__column"></div>
+      <div class="grid__column">
+        <div class="grid__sub-column" style="left: 0"></div>
+      </div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column">
+        <div class="grid__sub-column" style="right: 0"></div>
+        <div class="grid__sub-column" style="right: -1rem"></div>
+      </div>
     </div>
-    <div class="grid__column"></div>
-    <div class="grid__column">
-      <div class="grid__sub-column" style="left: 0"></div>
     </div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column"></div>
-    <div class="grid__column">
-      <div class="grid__sub-column" style="right: 0"></div>
-      <div class="grid__sub-column" style="right: -1rem"></div>
-    </div>
-  </div>
-</div>
 
-</body>
+  </body>
+
 </html>
