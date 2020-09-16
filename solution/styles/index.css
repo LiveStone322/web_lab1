@@ -1,42 +1,198 @@
 @import "_fonts.css";
 
 :root {
-    --main-color: blue;
+  /* Интервал */
+  --line-height: 1.25;
+
+  /* Цвета */
+  --color-gray: #96A1AB;
+  --color-dark: #282E3A;
+  --color-gray-blue: #3D4957;
+  --color-beige: #DBC7A6;
+  --color-light-gray: #ECECEC;
+  --color-header-bg: #2A2A3A;
+
+  /* Шрифт */
+  --font-size-main: var(--ident-main);
+  --font-size-large: 1.25rem;
+  --font-size-small: 0.75rem;
+
+  /* Ширины, высоты */
+  --site-width: 1128px;
+  --header-height: 52px;
+  --footer-height: 68px;
+
+  /* Отступы */
+  --ident-main: 1rem;
+  --ident-large: 1.5rem;
+  --ident-small: 0.5rem;
+  --ident-very-small: 0.25rem;
+
+  /* Радиусы округления */
+  --border-radius-main: 0.5rem;
+  --border-radius-small: 0.25rem;
+
+  /* Размер аватара */
+  --avatar-size: 2.25rem;
 }
 
+/* Общие стили */
 * {
-    box-sizing: border;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-size-main);
+  color: var(--color-gray);
+  line-height: var(--line-height);
 }
 
-.btn {
-    
+body {
+  background-color: var(--color-light-gray);
 }
 
+.container {
+  display: flex;
+  padding: 0 var(--ident-main);
+  width: 100%;
+  max-width: var(--site-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.col-small, .col-large {
+  position: relative;
+  width: 100%;
+}
+
+.col-small {
+  display: flex;
+  width: calc(100% * 1/6);
+}
+
+.col-large {
+  flex: 0 0 83.333333%;
+  max-width: 924px;
+}
+
+.btn, .btn:focus {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0 var(--ident-main);
+}
+
+/* Верх */
+.header {
+  height: var(--header-height);
+  background-color: var(--color-header-bg);
+}
+.header .container {
+  align-items: center;
+}
+
+.header__logo {
+  color: var(--color-light-gray);
+}
 .header__top-menu {
-    display: flex;
-    flex-flow: row wrap;
-	justify-content: space-between;
-}
-.left-menu {
-    width:30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.header__navigation {
+  display: flex;
+}
+.header__profile a:nth-child(2n) {
+  padding-left: 32px;
+}
+
+.btn_top {
+  height: var(--header-height);
+  background-color: transparent;
+}
+
+.btn_top_active {
+  background-color: var(--color-light-gray);
+}
+
+/* Лево */
+.main__left-menu {
+  display: flex;
+  flex-direction: column;
+}
+.main__left-menu > p {
+  padding: var(--ident-main) 0;
+  font-size: var(--font-size-large);
+}
+
+.btn_left {
+  text-align: left;
+  padding-top: var(--ident-small);
+  padding-bottom: var(--ident-small);
+}
+
+.btn_left_active {
+  background: var(--color-gray-blue);
+  border-radius: var(--border-radius-small);
+}
+
+/* Середина */
 .main {
-    width: 70%;
-}
-.main__messages {
-    border: 2px solid var(--main-color);
-    border-radius: 10px;
-}
-.messages__message {
-    padding: 5px 20px;
-}
-.messages__message + .messages__message {
-    border-top: 2px solid var(--main-color);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
-.message__logo {
-    border-radius: 50% 50%;
+.main__messages {
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+.main__messages > p {
+  padding: var(--ident-main) 0;
+  font-size: var(--font-size-large);
+}
+
+.messages__message {
+  background-color: var(--color-gray-blue);
+  border-radius: var(--border-radius-main);
+  padding: var(--ident-main);
+}
+
+.messages__message {
+  margin-bottom: var(--ident-main);
+}
+
+.message__first-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message__profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.message__avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.message__profile-info > p{
+  color: var(--color-beige);
+  font-size: var(--font-size-large);
+  padding-left: var(--ident-small);
+}
+
+.messages__message-theme {
+  padding: var(--ident-very-small) 0;
+}
+
+/* Низ */
+footer {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark);
 }
 
 /* For debug */
